@@ -71,7 +71,8 @@ public class RoomNodeGraph : EditorWindow
     {
         if(currentRoomNodeGraph.linePosition != Vector2.zero)
         {
-            Handles.DrawBezier(currentRoomNodeGraph.roomNodeToDrawLineFrom.rect.center, currentRoomNodeGraph.linePosition, currentRoomNodeGraph.roomNodeToDrawLineFrom.rect.center, currentRoomNodeGraph.linePosition, Color.white, null, connectingLineWidth);
+            Handles.DrawBezier(currentRoomNodeGraph.roomNodeToDrawLineFrom.rect.center, currentRoomNodeGraph.linePosition,
+            currentRoomNodeGraph.roomNodeToDrawLineFrom.rect.center, currentRoomNodeGraph.linePosition, Color.white, null, connectingLineWidth);
 
         }
     }
@@ -80,7 +81,7 @@ public class RoomNodeGraph : EditorWindow
     {
         if (currentRoomNode == null || currentRoomNode.isLeftClickDragging == false)
         {
-        currentRoomNode = IsMouseOverRoomNode(currentEvent);
+            currentRoomNode = IsMouseOverRoomNode(currentEvent);
         }
 
         if (currentRoomNode == null || currentRoomNodeGraph.roomNodeToDrawLineFrom != null)
